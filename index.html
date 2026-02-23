@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <title>Homework #3: D3 Linking - CSE 578 - Spring 2025</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
+        <script>
+            console.log("Is d3.sankey available?", d3.sankey);
+        </script>
+        <script src="./imgs/js/d3-sankey.min.js"></script>
+        <script src="abalas47.js" defer></script>
+        <style>
+            .myContainer {
+                margin:auto;
+                width:1210px;
+            }
+            svg {
+                width: 580px;
+                height:400px;
+                background-color: white;
+                border: 1px solid lightgray;
+                border-radius: 3px;
+            }
+            #treemap_div, #sankey_div {
+                float:left;
+                width:600px;
+                padding:10px;
+            }
+            #sankey_div {
+                float:right;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="myContainer">
+            <h1 class="text-center">Homework #3: D3 Linking</h1>
+            <h3 class="text-center">Akshara Balasubramanian - abalas47@asu.edu</h3>
+            <hr>
+            <form class="border border-dark rounded p-2 mb-2 bg-light shadow-sm">
+                <label for="input_val">Enter text here</label>
+                <textarea class="form-control mb-2 mt-1" id="input_val" rows="8">
+                </textarea>
+                <button type="button" class="btn btn-dark mb-1">Submit text</button>
+            </form>    
+            <div id="treemap_div" class="border border-dark rounded bg-light shadow-sm">
+                    Distribution of characters
+                    <svg id="tmap_svg"></svg>
+            </div>
+            <div id="sankey_div" class="border border-dark rounded bg-light shadow-sm">
+                    <span id="labelName">Character flow for ...</span>
+                    <svg id="sankey_svg"></svg>
+            </div>
+        </div>
+    </body>
+</html>
